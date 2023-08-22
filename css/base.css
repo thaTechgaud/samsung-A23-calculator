@@ -1,0 +1,16 @@
+/* Base styles: Applies to all elements */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--light-gray);
+    height: 100vh; /*vh = view height*/
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,7 @@
+
+/* Base styles */
+@import './css/base.css';
+@import './css/variables.css';
+
+/* Main app styles */
+@import './css/main.css';
