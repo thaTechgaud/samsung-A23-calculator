@@ -1,0 +1,55 @@
+
+body {
+    padding: 50px 0;
+    /* position: relative; */
+}
+
+.main {
+    width: calc(var(--main-container-width) + (var(--flex-gap) * 2));
+    background: white;
+    margin: 0 auto;
+    padding: var(--flex-gap);
+    box-shadow: 5px 5px 10px var(--grey);
+    border-radius: var(--main-radius);
+}
+
+.btn-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2px;
+    width: var(--main-container-width);
+}
+
+.calc-btn {
+    width: calc((var(--main-container-width)/var(--divisor)) - var(--flex-gap));
+    height: calc((var(--main-container-width)/var(--divisor)) - var(--flex-gap));
+    background: #121212;
+    color: #fefefe;
+    border-radius: var(--main-radius);
+    font-size: 16px;
+}
+
+.calc-result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-bottom: var(--flex-gap);
+}
+
+.user-input,
+.result {
+    font-size: 17px;
+    height: 25px;
+}
+
+.user-input {
+    width: 128px; /* 0px */
+    /* border: 1px solid red; */
+}
+
+.span-user-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

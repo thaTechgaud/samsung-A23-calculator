@@ -1,6 +1,17 @@
 /* CSS variables: For saving property or styles for reuse */
 
 :root {
-    --light-gray: lightgray;
+    /* colors */
+    --light-gray: #e1e1e1;
+    --grey: #808080;
 
+    /* Radius*/
+    --main-radius: 5px;
+
+    /* width dimensions */
+    --main-container-width: 240px;
+
+    /* Gap & divisor dimensions */
+    --flex-gap: 2px;
+    --divisor: 4;
 }
