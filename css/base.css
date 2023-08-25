@@ -6,11 +6,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     background: var(--light-gray);
-    height: 100vh; /*vh = view height*/
+    height: 100vh;
+    /*vh = view height*/
 }
 
 button {
     cursor: pointer;
+}
+
+input:disabled {
+    cursor: text;
 }
