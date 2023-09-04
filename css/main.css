@@ -1,10 +1,25 @@
-
 body {
     padding: 50px 0;
     /* position: relative; */
 }
 
-.main {
+header,
+footer {
+    text-align: center;
+    /* height: 30px; */
+}
+
+header {
+    /* background: blue; */
+}
+
+main {
+    /* background: red; */
+    /* height: calc(100% - 60px); */
+    /* padding-top: 30px; */
+}
+
+.calculator {
     width: calc(var(--main-container-width) + (var(--flex-gap) * 2));
     background: white;
     margin: 0 auto;
@@ -44,7 +59,8 @@ body {
 }
 
 .user-input {
-    width: 128px; /* 0px */
+    width: 128px;
+    /* 0px */
     /* border: 1px solid red; */
 }
 
@@ -52,4 +68,9 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+footer {
+    text-align: center;
+    /* background: yellow; */
 }
