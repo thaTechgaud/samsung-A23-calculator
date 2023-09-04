@@ -43,6 +43,7 @@ main {
     color: #fefefe;
     border-radius: var(--main-radius);
     font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .calc-result-section {
@@ -53,14 +54,19 @@ main {
 }
 
 .user-input,
-.result {
+.result,
+.span-user-input {
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
+}
+
+.user-input,
+.result {
     height: 25px;
 }
 
 .user-input {
-    width: 128px;
-    /* 0px */
+    width: 0px;
     /* border: 1px solid red; */
 }
 
@@ -68,6 +74,8 @@ main {
     position: absolute;
     top: 0;
     right: 0;
+    min-width: 0px;
+    visibility: hidden;
 }
 
 footer {

@@ -1,7 +1,8 @@
-import { charIsNaN, stringToNumber } from './helpers.js';
+import { charIsNaN, stringToNumber, valueWithoutSpaceInItFunc } from './helpers.js';
 
 const calcBtns = document.getElementsByClassName('calc-btn');
 const userInput = document.getElementById('user-input');
+const spanUserInput = document.getElementById('span-user-input');
 
 for (let i = 0; i < calcBtns.length; i += 1) {
     calcBtns[i].addEventListener('click', function () {
@@ -36,6 +37,18 @@ for (let i = 0; i < calcBtns.length; i += 1) {
             userInput.value = userInput.value.slice(0, secondToLastPosition) + userInput.value.slice(-1);
         }
 
+        // Delete button should delete input content from right to left
+        if (deleteBtn) {
+            userInput.value = userInput.value.slice(0, -1);
+        }
+
+        // Input field should grow from right to left as content increase
+        userInput.value = valueWithoutSpaceInItFunc(userInput.value);
+        spanUserInput.innerHTML = valueWithoutSpaceInItFunc(userInput.value);
+        userInput.style.width = `${spanUserInput.offsetWidth}px`;
+
+
+
     });
 }
 
@@ -49,11 +62,11 @@ for (let i = 0; i < calcBtns.length; i += 1) {
 // DONE! 2 zeros cannot sit side by side
 // DONE! Number 0 (Zero) cannot be first input value when input value length is greater than 1
 // DONE! We don't want to be able to enter content on input - only on button click
-// TODO LATER: We don't want to allow letters or any other characters in the input fields that is not on the buttons
+// DONE! Input field should grow from right to left as content increase
+// DONE! We want the delete button to remove the values in the input from right to left
+// IN PROGRESS! Add calc title in html later - Samsung Galaxy A23 style calulator
+// TODO LATER: We don't want to allow letters or any other characters in the input fields that is not on the buttons [note: We have done for empty spaces already]
 // TODO LATER: Add a blinking cursor to input field UI area
-// Add calc title in html later - Samsung Galaxy A23 style calulator
-// Input field should grow from right to left as content increase
-// We want the delete button to remove the values in the input from right to left
 
 // Functionality - related ones:
 // We want calc to perform math calculations at the points when we we introduce +, -, / and * signs
